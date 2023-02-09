@@ -1,7 +1,6 @@
 import sys
 import pandas as pd
-from PyQt5.QtWidgets import QFileDialog, QTableView, QApplication
-from PyQt5.QtCore import QAbstractTableModel
+from PyQt5.QtWidgets import QFileDialog, QTableView
 from modeloPandas import modeloPandas
 
 class abreArquivo:
@@ -14,12 +13,10 @@ class abreArquivo:
         print(self.arquivo)
         self.arquivoPDataFrame()
 
-    def getArquivo(self):
-        return self.arquivo
-
     def arquivoPDataFrame(self):
-        #self.df = pd.DataFrame(zip(self.arquivo))
+        #Pega o arquivo selecionado e lê para DataFrame
         self.df = pd.read_csv(self.arquivo[0],sep=';')
+
         #Cria a tabela de exibição do DataFrame
         self.view_tabela = QTableView()
         modelo_tabela = modeloPandas(self.df)

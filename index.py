@@ -1,12 +1,7 @@
 #import openFile as oF
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget,QPushButton, QLabel, QTableView
-from PyQt5.QtGui import QIcon
-from pathlib import Path
+from PyQt5.QtWidgets import QApplication, QWidget,QPushButton, QLabel
 from abreArquivo import abreArquivo
-from modeloPandas import modeloPandas
-
-
 
 #Cria aplicação
 app = QApplication(sys.argv)
@@ -23,12 +18,6 @@ btn_abreArquivo.setGeometry(300,300,100,30)
 
 #Cria objeto abreArquivo
 ab = abreArquivo("")
-
-def setView():
-    #Cria a tabela de exibição do DataFrame
-    view_tabela = QTableView()
-    modelo_tabela = modeloPandas(ab.arquivoPDataFrame())
-    view_tabela.setModel(modelo_tabela)
 
 #Evento click do botão
 btn_abreArquivo.clicked.connect(ab.AbreArquivo)
