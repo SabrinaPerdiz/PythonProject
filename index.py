@@ -9,7 +9,7 @@ app = QApplication(sys.argv)
 #Cria Janela
 janela = QWidget()
 janela.resize(700,700)
-janela.setWindowTitle("Analisador Foda")
+janela.setWindowTitle("Analisador")
 
 #Cria Botão
 btn_abreArquivo = QPushButton("Abrir Arquivo",janela)
@@ -27,7 +27,7 @@ btn_abreArquivo.clicked.connect(ab.AbreArquivo)
 #btn_abreArquivo.setStyleSheet("")
 
 #Cria label
-label_titulo = QLabel("Analisador Foda", janela)
+label_titulo = QLabel("Analisador", janela)
 label_titulo.move(250,100)
 label_titulo.setStyleSheet("font-size: 30px;")
 
