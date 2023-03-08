@@ -23,6 +23,8 @@ ab = abreArquivo("")
 btn_abreArquivo.clicked.connect(ab.AbreArquivo)
 #btn_abreArquivo.clicked.connect(lambda: setView())
 
+ab.view_tabela.clicked(ab.onTableClicked)
+
 #Seta o CSS
 #btn_abreArquivo.setStyleSheet("")
 

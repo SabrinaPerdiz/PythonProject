@@ -22,3 +22,7 @@ class modeloPandas(QAbstractTableModel):
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             return self._data.columns[col]
         return None
+
+    def sorter(self, col):
+       self._data = self._data.sort_values(by=[col])
+       return None
