@@ -3,7 +3,7 @@
 Projeto básico para treinar conhecimentos em Python
 Até o momento, esta aplicação abre arquivos .csv separados por ";" e exibe numa tabela
 ## Bibliotecas utilizadas
-- Sys
+- sys
 - Pandas
 - PyQt5
 ## Conhecimentos obtidos até o momento (não observados em estudos anteriores)
